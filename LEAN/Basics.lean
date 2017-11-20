@@ -23,22 +23,16 @@ def next_weekday : day → day
 
 #check (next_weekday (next_weekday day.saturday))
 
-def even(n : ℕ) : Prop := ∃ m, n = 2 * m
-
-#check even 10
-
-example : even 10 := ⟨ 5, rfl ⟩
-
-theorem and_commutative (p q : Prop) : p ∧ q → q ∧ p :=
-assume
 
 /-
 def test_next_weekday : Prop := (next_weekday (next_weekday day.saturday)) = day.tuesday
 
 #check test_next_weekday
+-/
 
-theorem test_next_weekday' : (next_weekday (next_weekday day.saturday)) = day.tuesday :=
+/-
+theorem test_next_weekday : (next_weekday (next_weekday day.saturday)) = day.tuesday :=
+begin
 
- 
-example : test_next_weekday := ⟨ day.tuesday, rfl ⟩ 
+end
 -/
